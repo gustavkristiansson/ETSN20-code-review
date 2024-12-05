@@ -2,12 +2,13 @@ package lab4.main;
 
 public class Application {
     public static void main(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Two arguments needed, e.g. file to search and pattern to match");
+        if (args.length < 3 || !args[0].equals("search")) {
+            System.out.println("Three arguments needed, e.g. <search> <file> <pattern>");
             return;
         }
-        String input = args[0];
-        String pattern = args[1];
+
+        String input = args[1];
+        String pattern = args[2];
         new Parser(input, pattern);
     }
 }

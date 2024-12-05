@@ -19,11 +19,11 @@ public class Parser {
     }
 
     public void findPattern() {
-        int i = 0;
+        int i = 1;
 
         while(s.hasNextLine()) {
             String line = s.nextLine();
-            if (line.contains(pattern)) {
+            if (line.toLowerCase().contains(pattern.toLowerCase())) {
                 System.out.println(line + " LineNumber: " + i);
             }
             i++;
